@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+// import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
 	return (
@@ -30,11 +31,11 @@ const Navbar = (props) => {
 								</a>
 							</li>
 
-							<li className="nav-item">
-								<a className="nav-link" href="#">
+							{/* <li className="nav-item">
+								<Link className="nav-link" to="/about">
 									About
-								</a>
-							</li>
+								</Link>
+							</li> */}
 						</ul>
 
 						<form className="d-flex" role="search">
