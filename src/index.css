@@ -1,0 +1,7 @@
+.form-control.textarea-light::placeholder {
+	color: #5d6369;
+}
+
+.form-control.textarea-dark::placeholder {
+	color: #a3a8b0;
+}
