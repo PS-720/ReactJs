@@ -1,5 +1,6 @@
 nav {
-	padding: 10px, 2%;
+	height: 60px;
+	padding: 10px 2%;
 	justify-content: space-between;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	background-color: #fff;
@@ -12,7 +13,7 @@ nav {
 	margin-right: 25px;
 }
 .nav-left .logo-icon {
-	width: 130px;
+	width: 100px;
 }
 .nav-middle .search-box {
 	margin-right: 15px;
@@ -28,4 +29,23 @@ nav {
 }
 .nav-middle .search-box img {
 	width: 15px;
+}
+.nav-right button {
+	background-color: #f6f5f5a6;
+	outline: none;
+	border: 1px solid rgb(221, 221, 221);
+	border-radius: 20px;
+	padding: 10px;
+	margin-right: 25px;
+	height: 30px;
+	justify-content: center;
+	cursor: pointer;
+}
+.nav-right > img {
+	width: 25px;
+	margin-right: 25px;
+}
+.nav-right .user-icon {
+	width: 35px;
+	border-radius: 50%;
 }

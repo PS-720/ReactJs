@@ -1,8 +1,13 @@
 import React from 'react';
 import "./Home.css";
+import Sidebar from '../../components/Sidebar/Sidebar';
 
-export const Home = () => {
+const Home = () => {
   return (
-    <div>Home</div>
-  )
+    <>
+      <Sidebar />
+    </>
+  );
 }
+
+export default Home;

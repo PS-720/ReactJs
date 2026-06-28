@@ -13,7 +13,7 @@ const Navbar = () => {
 		<nav className="flex-div">
 			<div className="nav-left flex-div">
 				<img className="menu-icon" src={menu_icon} alt="Menu" />
-				<img className="logo" src={logo} alt="Logo" />
+				<img className="logo-icon" src={logo} alt="Logo" />
 			</div>
 
 			<div className="nav-middle flex-div">
@@ -25,7 +25,7 @@ const Navbar = () => {
 			</div>
 
 			<div className="nav-right flex-div">
-				<button>
+				<button className="flex-div">
 					<img src={add_icon} alt="" />
 					Create
 				</button>
