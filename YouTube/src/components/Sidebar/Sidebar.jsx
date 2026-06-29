@@ -10,11 +10,16 @@ import music from "../../assets/music.svg"
 import blog from "../../assets/blog.svg"
 import news from "../../assets/news.svg"
 import user from "../../assets/profile_icon.svg"
+import piyush from "../../assets/Piyush.jpg"
+import akshit from "../../assets/Akshit.png"
+import rahul from "../../assets/Rahul.jpg"
+import aman from "../../assets/Aman.jpg"
+import anshika from "../../assets/Anshika.png"
 
 
-const Sidebar = () => {
+const Sidebar = ({sidebar}) => {
   return (
-    <div className='sidebar '>
+    <div className={`sidebar ${sidebar==true?"":"small-sidebar" } `}>
       <div className="shortcut-links">
         <div className="side-link">
           <img src={home} alt="" />
@@ -57,24 +62,24 @@ const Sidebar = () => {
       <div className="subscription-list">
         <h3>Subscribed</h3>
         <div className="side-link">
-          <img src={user} alt="" />
-          <p>User</p>
+          <img src={piyush} alt="" />
+          <p>Piyush Shah</p>
         </div>
         <div className="side-link">
-          <img src={user} alt="" />
-          <p>User</p>
+          <img src={akshit} alt="" />
+          <p>Akshit Chandel</p>
         </div>
         <div className="side-link">
-          <img src={user} alt="" />
-          <p>User</p>
+          <img src={rahul} alt="" />
+          <p>Rahul Lingwal</p>
         </div>
         <div className="side-link">
-          <img src={user} alt="" />
-          <p>User</p>
+          <img src={aman} alt="" />
+          <p>Aman Negi</p>
         </div>
         <div className="side-link">
-          <img src={user} alt="" />
-          <p>User</p>
+          <img src={anshika} alt="" />
+          <p>Anshika Rautela</p>
         </div>
       </div>
     </div>
