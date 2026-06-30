@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import menu_icon from "../../assets/menu_icon.svg";
-import logo from "../../assets/youtube-logo-icon.svg";
+import logo from "../../assets/yt_logo.png";
 import search_icon from "../../assets/search_icon.svg";
 import voice_search_icon from "../../assets/voice_search_icon.svg";
 import notifications_icon from "../../assets/notifications_iocn.svg";
@@ -24,9 +24,9 @@ const Navbar = ({ setSidebar }) => {
 			<div className="nav-middle flex-div">
 				<div className="search-box flex-div">
 					<input type="search" placeholder="Search" />
-					<img src={search_icon} alt="" />
 				</div>
-				<img src={voice_search_icon} alt="" />
+				<img className="search-icon" src={search_icon} alt="" />
+				<img className="voice-search-icon" src={voice_search_icon} alt="" />
 			</div>
 
 			<div className="nav-right flex-div">
@@ -35,7 +35,7 @@ const Navbar = ({ setSidebar }) => {
 					Create
 				</button>
 				<img src={notifications_icon} alt="" />
-				<img src={profile_icon} alt="" />
+				<img className="user-icon" src={profile_icon} alt="" />
 			</div>
 		</nav>
 	);

@@ -1,48 +1,78 @@
 .sidebar {
-    width: 15%;
-    background-color: #fff;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    padding-left: 2%;
-    padding-top: 80px;
+	width: 16%;
+	background-color: #fff;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	padding-top: 90px;
 }
 .shortcut-links img {
-    width: 20px;
-    margin-right: 20px;
+	width: 25px;
+	margin-right: 10px;
 }
 .side-link {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    width: fit-content;
-    flex-wrap: wrap;
-    cursor: pointer;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	width: fit-content;
+	flex-wrap: wrap;
+	cursor: pointer;
 }
 .sidebar hr {
-    border: 0;
-    height: 1px;
-    background-color: #ccc;
-    width: 85%;
+	border: 0;
+	height: 1px;
+	background-color: #ccc;
+	width: 100%;
+	margin: 25px 0;
 }
-.subscription-list h3 {
-    margin: 20px 0;
-    color: #5a5a5a;
-    font-size: 13px;
+.subscriptions {
+    padding-left: 15px;
+}
+.subscriptions > p {
+    font-size: 16px;
+	font-weight: bold;
+}
+.subscriptions .subscription-icon {
+	display: none;
+}
+.subscription-list {
+	padding-top: 20px;
 }
 .subscription-list img {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    margin-right: 20px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	margin-right: 10px;
 }
 .small-sidebar {
-    width: 5%;
+	width: 6%;
+	padding-left: 5px;
+	padding-right: 5px;
 }
-.small-sidebar p, .small-sidebar h3 {
-    display: none;
+.small-sidebar .side-link {
+	margin-left: auto;
+	margin-right: auto;
+	flex-direction: column;
+	gap: 10px;
 }
-.small-sidebar hr {
-    width: 50%;
-    margin-bottom: 25px;
+.small-sidebar .subscriptions {
+    padding-left: 0;
+}
+.small-sidebar .subscriptions .subscription-icon {
+	display: block;
+}
+.small-sidebar .subscriptions > p {
+	font-weight: normal;
+}
+.small-sidebar .subscription-list,
+.small-sidebar hr, .small-sidebar .subscriptions .greater-than-icon {
+	display: none;
+}
+.small-sidebar img {
+	margin-right: 0;
+}
+.small-sidebar p {
+	font-size: 12px;
 }
