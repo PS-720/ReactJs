@@ -1,16 +1,16 @@
-import React from 'react'
+import {Link} from "react-router-dom"
 import "./Feed.css"
 import thumbnail from "../../assets/DB08.jpg"
 
 const Feed = () => {
   return (
 		<div className="feed">
-			<div className="card">
+			<Link to={`video/20/4521`} className="card">
 				<img src="https://i.ytimg.com/vi/zzwRbKI2pn4/hqdefault.jpg" alt="" />
 				<h2>YALGAAR - CARRYMINATI X Wily Frenzy</h2>
 				<h3>CarryMinati</h3>
 				<p>340M views &bull; 5 years ago</p>
-			</div>
+			</Link>
 
 			<div className="card">
 				<img src="https://i.ytimg.com/vi/irDToH4YXzM/hqdefault.jpg" alt="" />

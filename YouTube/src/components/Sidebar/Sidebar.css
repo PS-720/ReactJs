@@ -25,13 +25,13 @@
 	height: 1px;
 	background-color: #ccc;
 	width: 100%;
-	margin: 25px 0;
+	margin-bottom: 25px;
 }
 .subscriptions {
     padding-left: 15px;
 }
-.subscriptions > p {
-    font-size: 16px;
+.subscriptions > p, .user > p {
+    font-size: 15px;
 	font-weight: bold;
 }
 .subscriptions .subscription-icon {
@@ -39,6 +39,9 @@
 }
 .subscription-list {
 	padding-top: 20px;
+}
+.subscription-list .side-link p {
+	font-size: 14px;
 }
 .subscription-list img {
 	width: 25px;
@@ -63,11 +66,11 @@
 .small-sidebar .subscriptions .subscription-icon {
 	display: block;
 }
-.small-sidebar .subscriptions > p {
+.small-sidebar .subscriptions > p, .small-sidebar .user > p {
 	font-weight: normal;
 }
 .small-sidebar .subscription-list,
-.small-sidebar hr, .small-sidebar .subscriptions .greater-than-icon {
+.small-sidebar hr, .small-sidebar .greater-than-icon {
 	display: none;
 }
 .small-sidebar img {

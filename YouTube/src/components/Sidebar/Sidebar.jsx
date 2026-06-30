@@ -4,7 +4,12 @@ import home from "../../assets/home_icon.svg";
 import shorts from "../../assets/yt_shorts.svg";
 import subscription from "../../assets/subscriptions_icon.svg";
 import user from "../../assets/profile_icon.svg";
-import greaterThan from "../../assets/gt.svg"
+import greaterThan from "../../assets/gt.svg";
+import greatStack from "../../assets/great_stack.png"
+import chaiCode from "../../assets/chai_aur_code.png"
+import takeUForward from "../../assets/take_you_forward.png"
+import codeHelp from "../../assets/code_help.png"
+import codeWithHarry from "../../assets/code_with_harry.png"
 
 const Sidebar = ({ sidebar }) => {
 	return (
@@ -21,36 +26,50 @@ const Sidebar = ({ sidebar }) => {
 				<hr />
 				<div className="side-link subscriptions">
 					<img className="subscription-icon" src={subscription} alt="" />
-          <p>Subscriptions
-            <img className="greater-than-icon" style={{width: "12px", marginLeft: "10px"}} src={greaterThan} alt="" />
-          </p>
+					<p>
+						Subscriptions
+						<img
+							className="greater-than-icon"
+							style={{ width: "12px", marginLeft: "10px" }}
+							src={greaterThan}
+							alt=""
+						/>
+					</p>
 					<div className="subscription-list">
 						<div className="side-link">
-							<img src={user} alt="" />
+							<img src={greatStack} alt="" />
 							<p>Great Stack</p>
 						</div>
 						<div className="side-link">
-							<img src={user} alt="" />
+							<img src={chaiCode} alt="" />
 							<p>Chai Aur Code</p>
 						</div>
 						<div className="side-link">
-							<img src={user} alt="" />
+							<img src={takeUForward} alt="" />
 							<p>Take You Forward</p>
 						</div>
 						<div className="side-link">
-							<img src={user} alt="" />
+							<img src={codeHelp} alt="" />
 							<p>Code Help</p>
 						</div>
 						<div className="side-link">
-							<img src={user} alt="" />
+							<img src={codeWithHarry} alt="" />
 							<p>Code With Harry</p>
 						</div>
 					</div>
 				</div>
 				<hr />
-				<div className="side-link">
+				<div className="side-link user">
 					<img src={user} alt="" />
-					<p>You</p>
+					<p>
+						You
+						<img
+							className="greater-than-icon"
+							style={{ width: "12px", marginLeft: "10px" }}
+							src={greaterThan}
+							alt=""
+						/>
+					</p>
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 nav {
-	height: 70px;
+	height: 60px;
 	padding: 0 1.5%;
 	justify-content: space-between;
 	background-color: #fff;
@@ -29,7 +29,7 @@ nav {
 	font-size: 16px;
 }
 .nav-middle .search-icon {
-	background-color: #f0f0f072;
+	background-color: #efefef;
 	padding: 9px 22px;
 	border: 1px solid #ccc;
 	border-top-right-radius: 25px;
@@ -42,12 +42,12 @@ nav {
 	background-color: #f0f0f0;
 }
 .nav-middle .voice-search-icon {
-	background-color: #f0f0f072;
+	background-color: #efefef;
 	border-radius: 50%;
 	padding: 12px;
 }
 .nav-right button {
-	background-color: #f6f5f5a6;
+	background-color: #efefef;
 	outline: none;
 	border: none;
 	border-radius: 25px;
