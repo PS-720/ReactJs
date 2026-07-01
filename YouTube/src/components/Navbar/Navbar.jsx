@@ -37,7 +37,7 @@ const Navbar = ({ setSidebar }) => {
 					<img src={add_icon} alt="" />
 					Create
 				</button>
-				<img src={notifications_icon} alt="" />
+				<img className="notifications-icon" src={notifications_icon} alt="" />
 				<img className="user-icon" src={profile_icon} alt="" />
 			</div>
 		</nav>

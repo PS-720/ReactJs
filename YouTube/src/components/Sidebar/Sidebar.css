@@ -79,3 +79,8 @@
 .small-sidebar p {
 	font-size: 12px;
 }
+@media (max-width: 900px) {
+	.sidebar {
+		display: none;
+	}
+}

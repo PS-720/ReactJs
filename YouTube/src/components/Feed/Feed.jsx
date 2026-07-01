@@ -27,7 +27,9 @@ const Feed = ({ category }) => {
 						className="card">
 						<img src={item.snippet.thumbnails.medium.url} alt="" />
 						<h2>{item.snippet.title}</h2>
-						<h3>{item.snippet.channelTitle}</h3>
+						<h3>
+							{item.snippet.channelTitle} &bull; {""}{" "}
+						</h3>
 						<p>
 							{valueConverter(item.statistics.viewCount)} views &bull; {""}
 							{moment(item.snippet.publishedAt).fromNow()}

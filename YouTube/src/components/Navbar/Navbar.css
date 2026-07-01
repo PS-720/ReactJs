@@ -1,6 +1,6 @@
 nav {
-	height: 60px;
-	padding: 0 1.5%;
+	height: 70px;
+	padding: 5px 1.5%;
 	justify-content: space-between;
 	background-color: #fff;
 	position: sticky;
@@ -65,9 +65,23 @@ nav {
 }
 .nav-right .user-icon {
 	padding: 0;
-	width: 28px;
+	width: 35px;
 	border-radius: 50%;
 }
 .nav-right .user-icon:hover {
 	background-color: transparent;
+}
+@media (max-width: 900px) {
+	.menu-icon, .nav-middle .voice-search-icon, .nav-right button {
+		display: none;
+	}
+	.nav-middle .search-box input {
+		width: 100px;
+	}
+	.nav-right .user-icon {
+		width: 30px;
+	}
+	.nav-right .notifications-icon {
+		margin-right: 0;
+	}
 }

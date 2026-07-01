@@ -34,3 +34,11 @@
     font-size: 14px;
     color: #6a6a6a;
 }
+@media(max-width: 900px) {
+    .card h3, .card p {
+        display: inline;
+    }
+    .card h3 {
+        font-weight: normal;
+    }
+}

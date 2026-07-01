@@ -2,3 +2,9 @@
     gap: 15px;
     align-items: start;
 }
+@media(max-width: 900px) {
+    .play-container {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+}
