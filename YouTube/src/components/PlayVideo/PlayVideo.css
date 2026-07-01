@@ -6,9 +6,10 @@
     align-items: start;
     gap: 10px;
 }
-.play-video video {
+.play-video iframe {
     width: 100%;
     border-radius: 15px;
+    height: 37vw;
 }
 .play-video h3 {
     padding-left: 10px;
@@ -24,6 +25,7 @@
     width: 25px;
 }
 .stats-left .channel-logo {
+    border-radius: 50%;
     margin-right: 10px;
     width: 40px;
 }

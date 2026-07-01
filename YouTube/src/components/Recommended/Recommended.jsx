@@ -1,7 +1,7 @@
 import "./Recommended.css";
 import thumbnail from "../../assets/DB08.jpg";
 
-const Recommended = () => {
+const Recommended = ({categoryId}) => {
 	return (
 		<div className="recommended-video">
 			<div className="video-card">

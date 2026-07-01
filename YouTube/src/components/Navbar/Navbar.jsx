@@ -7,6 +7,7 @@ import voice_search_icon from "../../assets/voice_search_icon.svg";
 import notifications_icon from "../../assets/notifications_iocn.svg";
 import profile_icon from "../../assets/profile_icon.svg";
 import add_icon from "../../assets/add_icon.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ setSidebar }) => {
 	return (
@@ -16,9 +17,11 @@ const Navbar = ({ setSidebar }) => {
 					className="menu-icon"
 					src={menu_icon}
 					alt="Menu"
-					onClick={() => setSidebar((prev) => (!prev))}
+					onClick={() => setSidebar((prev) => !prev)}
 				/>
-				<img className="logo-icon" src={logo} alt="Logo" />
+				<Link to="/">
+					<img className="logo-icon" src={logo} alt="Logo" />
+				</Link>
 			</div>
 
 			<div className="nav-middle flex-div">
