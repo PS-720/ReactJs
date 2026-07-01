@@ -35,9 +35,10 @@ const PlayVideo = () => {
 					</div> */}
 				</div>
 				<div className="stats-right flex-div">
-					<div>
-            <img src={like} alt="" />5K
-            <p>|</p>
+					<div className="like">
+						<img src={like} alt="" />5K
+					</div>
+					<div className="dislike">
 						<img src={dislike} alt="" />
 					</div>
 					<div>

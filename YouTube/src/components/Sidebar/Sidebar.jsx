@@ -5,13 +5,13 @@ import shorts from "../../assets/yt_shorts.svg";
 import subscription from "../../assets/subscriptions_icon.svg";
 import user from "../../assets/profile_icon.svg";
 import greaterThan from "../../assets/gt.svg";
-import greatStack from "../../assets/great_stack.png"
-import chaiCode from "../../assets/chai_aur_code.png"
-import takeUForward from "../../assets/take_you_forward.png"
-import codeHelp from "../../assets/code_help.png"
-import codeWithHarry from "../../assets/code_with_harry.png"
+import greatStack from "../../assets/great_stack.png";
+import chaiCode from "../../assets/chai_aur_code.png";
+import takeUForward from "../../assets/take_you_forward.png";
+import codeHelp from "../../assets/code_help.png";
+import codeWithHarry from "../../assets/code_with_harry.png";
 
-const Sidebar = ({ sidebar }) => {
+const Sidebar = ({ sidebar, category, setCategory }) => {
 	return (
 		<div className={`sidebar ${sidebar === true ? "" : "small-sidebar"} `}>
 			<div className="shortcut-links">
@@ -60,7 +60,7 @@ const Sidebar = ({ sidebar }) => {
 				</div>
 				<hr />
 				<div className="side-link user">
-					<img src={user} alt="" />
+					<img className="user-icon" src={user} alt="" />
 					<p>
 						You
 						<img

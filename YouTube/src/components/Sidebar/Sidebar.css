@@ -34,7 +34,7 @@
     font-size: 15px;
 	font-weight: bold;
 }
-.subscriptions .subscription-icon {
+.subscriptions .subscription-icon, .user .user-icon {
 	display: none;
 }
 .subscription-list {
@@ -63,7 +63,7 @@
 .small-sidebar .subscriptions {
     padding-left: 0;
 }
-.small-sidebar .subscriptions .subscription-icon {
+.small-sidebar .subscriptions .subscription-icon, .small-sidebar .user .user-icon {
 	display: block;
 }
 .small-sidebar .subscriptions > p, .small-sidebar .user > p {

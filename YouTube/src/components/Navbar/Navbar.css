@@ -29,7 +29,7 @@ nav {
 	font-size: 16px;
 }
 .nav-middle .search-icon {
-	background-color: #efefef;
+	background-color: #ededed;
 	padding: 9px 22px;
 	border: 1px solid #ccc;
 	border-top-right-radius: 25px;
@@ -39,15 +39,15 @@ nav {
 	border-left: 0px;
 }
 .nav-left .menu-icon:hover, .nav-middle .search-icon:hover, .nav-middle .voice-search-icon:hover, .nav-right button:hover, .nav-right > img:hover {
-	background-color: #f0f0f0;
+	background-color: #e3e3e3;
 }
 .nav-middle .voice-search-icon {
-	background-color: #efefef;
+	background-color: #ededed;
 	border-radius: 50%;
 	padding: 12px;
 }
 .nav-right button {
-	background-color: #efefef;
+	background-color: #ededed;
 	outline: none;
 	border: none;
 	border-radius: 25px;

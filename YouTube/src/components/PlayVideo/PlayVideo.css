@@ -71,10 +71,36 @@
     padding: 8px 15px;
     font-size: 15px;
 }
+.stats-right div:hover {
+    background-color: #e3e3e3;
+}
+.stats-right .like {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: -10px;
+    cursor: default;
+}
+.stats-right .dislike {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: default;
+    position: relative;
+}
+.stats-right .dislike::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 60%;
+    border-left: 1px solid rgb(149, 149, 149);
+}
 .stats-right .more-icon {
     border-radius: 30px;
     background-color: #ededed;
     width: 40px;
     height: 40px;
     padding: 10px;
+}
+.stats-right .more-icon:hover {
+    background-color: #e3e3e3;
 }
