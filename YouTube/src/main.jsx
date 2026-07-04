@@ -6,7 +6,7 @@ import { HashRouter } from "react-router-dom"; // Keep this import
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
-		<HashRouter basename="/ReactJs/YouTube">
+		<HashRouter>
 			<App />
 		</HashRouter>
 	</StrictMode>,
