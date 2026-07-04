@@ -9,17 +9,18 @@ import profile_icon from "../../assets/profile_icon.svg";
 import add_icon from "../../assets/add_icon.svg";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ setSidebar }) => {
+const Navbar = ({ setSidebar, triggerFeedShuffle }) => { // Accept triggerFeedShuffle prop
+	const handleLogoClick = () => {
+		// The Link component handles navigation to "/"
+		// We want to force a re-fetch/shuffle when the home page is loaded/reloaded via logo click
+		triggerFeedShuffle();
+	};
+
 	return (
 		<nav className="flex-div">
 			<div className="nav-left flex-div">
-				<img
-					className="menu-icon"
-					src={menu_icon}
-					alt="Menu"
-					onClick={() => setSidebar((prev) => !prev)}
-				/>
-				<Link to="/">
+				<img className="menu-icon" src={menu_icon} alt="Menu" onClick={() => setSidebar((prev) => !prev)} />
+				<Link to="/" onClick={handleLogoClick}> {/* Add onClick handler */}
 					<img className="logo-icon" src={logo} alt="Logo" />
 				</Link>
 			</div>

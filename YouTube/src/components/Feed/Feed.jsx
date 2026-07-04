@@ -4,19 +4,23 @@ import moment from "moment";
 import { useEffect, useState } from "react";
 import { API_KEY, valueConverter } from "../../data";
 
-const Feed = ({ category }) => {
+const Feed = ({ category, refreshKey }) => {
+	// Accept refreshKey prop
 	const [data, setData] = useState([]);
 
 	const fetchData = async () => {
-		const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=100&regionCode=IN&videoCategoryId=${category}&key=${API_KEY}`;
+		const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=200&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
 		await fetch(videoList_url)
-			.then((response) => response.json())
-			.then((data) => setData(data.items));
+			.then((response) => response.json()) // Parse the JSON response
+			.then((data) => {
+				const shuffledItems = data.items.sort(() => Math.random() - 0.5); // Shuffle the array
+				setData(shuffledItems); // Set the state with the shuffled items
+			});
 	};
 
 	useEffect(() => {
-		fetchData();
-	}, [category]);
+		fetchData(); // This will run on initial mount and when category or refreshKey changes
+	}, [category, refreshKey]); // Add refreshKey to dependencies
 
 	return (
 		<div className="feed">
@@ -25,7 +29,15 @@ const Feed = ({ category }) => {
 					<Link
 						to={`video/${item.snippet.categoryId}/${item.id}`}
 						className="card">
-						<img src={item.snippet.thumbnails.medium.url} alt="" />
+						<img
+							src={
+								item.snippet.thumbnails.maxres?.url ||
+								item.snippet.thumbnails.standard?.url ||
+								item.snippet.thumbnails.high?.url ||
+								item.snippet.thumbnails.medium?.url
+							}
+							alt=""
+						/>
 						<h2>{item.snippet.title}</h2>
 						<h3>
 							{item.snippet.channelTitle} &bull; {""}{" "}

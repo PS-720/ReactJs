@@ -3,7 +3,8 @@ import "./Home.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Feed from "../../components/Feed/Feed";
 
-const Home = ({ sidebar }) => {
+const Home = ({ sidebar, refreshKey }) => {
+	// Accept refreshKey prop
 	const [category, setCategory] = useState(0);
 	return (
 		<>
@@ -13,7 +14,8 @@ const Home = ({ sidebar }) => {
 				setCategory={setCategory}
 			/>
 			<div className={`container ${sidebar === true ? "" : "large-container"}`}>
-				<Feed category={category} />
+				<Feed category={category} refreshKey={refreshKey} />{" "}
+				{/* Pass refreshKey */}
 			</div>
 		</>
 	);
