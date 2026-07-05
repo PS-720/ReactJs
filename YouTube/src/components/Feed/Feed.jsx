@@ -9,10 +9,15 @@ const Feed = ({ category, refreshKey }) => {
 	const [data, setData] = useState([]);
 
 	const fetchData = async () => {
-		const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=200&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
+		const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&videoCategoryId=${category}&key=${API_KEY}`;
 		await fetch(videoList_url)
 			.then((response) => response.json()) // Parse the JSON response
-			.then((data) => {
+			.then((data) => { // Filter out videos with duration <= 60 seconds
+				data.items = data.items.filter(item => {
+					const duration = moment.duration(item.contentDetails.duration);
+					return duration.asSeconds() > 90;
+				});
+
 				const shuffledItems = data.items.sort(() => Math.random() - 0.5); // Shuffle the array
 				setData(shuffledItems); // Set the state with the shuffled items
 			});
@@ -27,6 +32,7 @@ const Feed = ({ category, refreshKey }) => {
 			{data.map((item, index) => {
 				return (
 					<Link
+						key = {item.id}
 						to={`video/${item.snippet.categoryId}/${item.id}`}
 						className="card">
 						<img
